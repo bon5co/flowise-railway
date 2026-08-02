@@ -44,6 +44,10 @@ RUN chmod +x /usr/local/bin/railway-entrypoint.sh
 #   surprise, not a default.
 # NUMBER_OF_PROXIES=1 -- Flowise sits behind exactly one proxy here (Railway's edge), and
 #   the rate limiter needs that to read the real client IP instead of the edge's.
+#
+# PORT is deliberately NOT set: Railway injects it (8080) and the service domain targets the
+# same number. Baking a different default here only creates a way for the two to disagree,
+# which is a 502 at the edge with a healthy-looking server log.
 ENV DATABASE_TYPE=postgres \
     DATABASE_USER=postgres \
     DATABASE_NAME=postgres \
@@ -53,8 +57,7 @@ ENV DATABASE_TYPE=postgres \
     BLOB_STORAGE_PATH=/data/storage \
     LOG_PATH=/data/logs \
     DISABLE_FLOWISE_TELEMETRY=true \
-    NUMBER_OF_PROXIES=1 \
-    PORT=3000
+    NUMBER_OF_PROXIES=1
 
 EXPOSE 3000
 
