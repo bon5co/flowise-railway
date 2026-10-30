@@ -1,5 +1,9 @@
 # flowise-railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/flowise-v314-or-visual-ai-agent-builder-?referralCode=Z1xivh&utm_medium=integration&utm_source=template&utm_campaign=generic)
+
+**Deploy on Railway:** [Flowise template](https://railway.com/deploy/flowise-v314-or-visual-ai-agent-builder-?referralCode=Z1xivh&utm_medium=integration&utm_source=template&utm_campaign=generic)
+
 Railway-tuned [Flowise](https://github.com/FlowiseAI/Flowise) image: state that is not in
 Postgres kept on the volume, pinned release, empty deploy form.
 
